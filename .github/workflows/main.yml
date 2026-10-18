@@ -7,6 +7,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: nyxora-1.21.11
     steps:
       - uses: actions/checkout@v4
 
@@ -26,4 +29,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: nyxora-jar
-          path: build/libs/*.jar
+          path: nyxora-1.21.11/build/libs/*.jar
